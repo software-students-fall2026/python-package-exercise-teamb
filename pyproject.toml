@@ -32,7 +32,7 @@ Issues = "https://github.com/software-students-fall2026/python-package-exercise-
 where = ["src"]
 
 [tool.setuptools.package-data]
-nyu_wordle = ["dict.txt"]
+nyu_wordle = ["dict.txt", "nyu_words.txt"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
