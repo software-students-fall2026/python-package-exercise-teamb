@@ -104,9 +104,35 @@ pipenv install --dev
 ```
  
 ### 4. Run the tests
- 
+
 ```bash
 pipenv run pytest -v
+```
+
+The package includes unit tests, integration tests, and game edge-case tests.
+
+**Integration Tests (`tests/test_integration.py`) - Scott Kim**
+
+- Tests complete winning and losing scenarios.
+- Verifies that word validation, guess checking, and game management work together.
+- Ensures invalid guesses do not consume attempts.
+- Tests game resets and duplicate-letter feedback.
+
+**Game Edge-Case Tests (`tests/test_game_edge_cases.py`) - Scott Kim**
+
+- Tests winning and losing with a single attempt.
+- Verifies case-insensitive guesses and secret words.
+- Ensures invalid guesses do not change the game state.
+- Prevents guesses after the game ends.
+- Tests resetting the game after a loss.
+- Verifies guess history cannot be modified externally.
+- Tests invalid game configurations and reset inputs.
+
+To run the tests individually:
+
+```bash
+pipenv run pytest tests/test_integration.py -v
+pipenv run pytest tests/test_game_edge_cases.py -v
 ```
  
 ### 5. Build the package
