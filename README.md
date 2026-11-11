@@ -1,6 +1,6 @@
 # Python Package Exercise - Team B
 
-[![log github events](https://github.com/software-students-fall2026/python-package-exercise-teamb/actions/workflows/event-logger.yml/badge.svg)](https://github.com/software-students-fall2026/python-package-exercise-teamb/actions/workflows/event-logger.yml)
+[![log github events](https://github.com/software-students-fall2026/python-package-exercise-teamb/actions/workflows/build.yaml/badge.svg)](https://github.com/software-students-fall2026/python-package-exercise-teamb/actions/workflows/build.yaml)
 
 # Subject - NYU Wordle package
 
