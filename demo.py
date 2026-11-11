@@ -1,4 +1,4 @@
-import random
+from pathlib import Path
 
 from nyu_wordle import WordleGame, check_guess, load_dict, val_try
 
@@ -17,8 +17,12 @@ def display_feedback(guess, feedback):
 
 
 def main():
-    words = sorted(load_dict())
-    secret_word = random.choice(words)
+    nyu_words_path = Path(__file__).parent / "src" / "nyu_wordle" / "nyu_words.txt"
+
+    with open(nyu_words_path, "r") as file:
+        nyu_words = [line.strip() for line in file if line.strip()]
+
+    secret_word = WordleGame.choose_random_word(nyu_words)
     game = WordleGame(secret_word)
 
     print("Welcome to NYU Wordle!")
