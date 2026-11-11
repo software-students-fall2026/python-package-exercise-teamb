@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nyu-wordle-teamb"
+version = "0.1.0"
+description = "A NYU wordle."
+readme = "README.md"
+requires-python = ">=3.11"
+license-files = ["LICENSE"]
+authors = [
+    { name = "YIHYUN NAM" },
+    { name = "SALLY HEGAB" },
+    { name = "SCOTT KIM" },
+    { name = "SAAJID ROHMAN" },
+]
+keywords = ["wordle", "word game", "nyu", "game"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment :: Puzzle Games",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/software-students-fall2026/python-package-exercise-teamb"
+Repository = "https://github.com/software-students-fall2026/python-package-exercise-teamb"
+Issues = "https://github.com/software-students-fall2026/python-package-exercise-teamb/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+nyu_wordle = ["dict.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
