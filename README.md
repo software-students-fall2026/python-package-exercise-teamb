@@ -33,7 +33,7 @@ player input -> val_try (is it a valid word?) -> check_guess (letter results) ->
 
 ## Package Page Link
 The package is published on PyPI:
-[INSERT LNK]
+[NYU Wordle on PyPI](https://pypi.org/project/nyu-wordle-teamb/)
 
 ## Import Instruction
 ### Install
@@ -41,7 +41,7 @@ The package is published on PyPI:
 Python 3.11 or newer is required.
  
 ```bash
-pip install [INSERT PKG NAME]
+pip install nyu-wordle-teamb
 ```
  
 The import name is `nyu_wordle`.
@@ -73,7 +73,7 @@ print(f"You {game.get_status()}! The word was {game.secret_word.upper()}.")
  
 ### Example program
  
-A full example that uses every function in the package is in [`examples/demo.py`](./examples/demo.py).
+A playable command-line example is available in [`demo.py`](./demo.py).
 
 ## Set up the virtual environment, install dependencies, and build and test
 
@@ -163,7 +163,7 @@ pipenv run twine upload dist/*
 ### Run the example program from a clone of this repository
  
 ```bash
-pipenv run python examples/demo.py
+pipenv run python demo.py
 ```
  
 ### Run the game after installing from PyPI
