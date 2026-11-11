@@ -1,3 +1,5 @@
+from collections.abc import Iterable
+import random
 
 class WordleGame:
     def __init__(self, secret_word, max_attempts=6):
@@ -11,6 +13,9 @@ class WordleGame:
         self.max_attempts = max_attempts
         self.guesses = []
         self.status = "ongoing"
+
+    def choose_random_word(word_list: Iterable[str]) -> str:
+        return random.choice(word_list)
 
     def submit_guess(self, guess):
         """Record a validated guess and update the game state."""
